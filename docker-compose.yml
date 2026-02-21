@@ -1,8 +1,8 @@
 services:
   netbirdc:
-      image: netbirdio/netbird:0.58.2
+      image: netbirdio/netbird:0.63.0
       container_name: netbirdc
-      hostname: pvdoc
+      hostname: proxy
       restart: unless-stopped
       cap_add:
           - NET_ADMIN
