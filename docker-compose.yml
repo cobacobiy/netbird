@@ -1,0 +1,16 @@
+services:
+  netbirdc:
+      image: netbirdio/netbird:0.58.2
+      container_name: netbirdc
+      hostname: pvdoc
+      restart: unless-stopped
+      cap_add:
+          - NET_ADMIN
+          - SYS_ADMIN
+          - SYS_RESOURCE
+      network_mode: host
+      environment:
+          - NB_SETUP_KEY=${NB_SETUP_KEY}
+      volumes:
+          - ./config:/etc/netbird
+          - ./data:/var/lib/netbird
