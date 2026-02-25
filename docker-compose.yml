@@ -1,13 +1,13 @@
 services:
   netbird:
-      image: netbirdio/netbird:0.63.0
+      image: netbirdio/netbird:0.60.6
       container_name: netbird
       hostname: worker1
       restart: unless-stopped
-      command:
-          - up
-          - --allow-server-ssh
-          - --enable-ssh-root
+#      command:
+#          - up
+#          - --allow-server-ssh
+#          - --enable-ssh-root
       cap_add:
           - NET_ADMIN
           - SYS_ADMIN
